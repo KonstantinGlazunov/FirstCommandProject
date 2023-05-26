@@ -85,6 +85,6 @@ public class UsersServiceImpl implements UsersService {
                 maxHeight=user.getHeight();
             }
         }
-        System.out.println(age);
+
     }
 }
