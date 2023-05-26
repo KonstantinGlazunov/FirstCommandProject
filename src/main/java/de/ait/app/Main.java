@@ -83,6 +83,12 @@ public class Main {
                     System.exit(0);
                 default:
                     System.out.println("Команда не распознана");
+
+
+                case 5:
+                    System.out.println("Вывести возраст самого высокого человека");
+                    usersService.getNameOfHighest();
+                    break;
             }
 
         }

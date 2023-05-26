@@ -12,7 +12,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/app/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +53,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "last_opened_file_path": "D:/ProgrammingSchool/basik_programming/FirstTeamSimpleProject",
+    "last_opened_file_path": "C:/Java2023/FirstCommandProject",
     "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
@@ -114,21 +113,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UsersServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="simple-project" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="de.ait.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="de.ait.services" />
-      <option name="MAIN_CLASS_NAME" value="de.ait.services.UsersServiceImplTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="UsersServiceImplTest2" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="simple-project" />
       <extension name="coverage">
@@ -171,6 +155,21 @@
       <option name="MAIN_CLASS_NAME" value="java.de.ait.services.UsersServiceImplTest2" />
       <option name="METHOD_NAME" value="getNames" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UsersServiceImplTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="simple-project" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="de.ait.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="de.ait.services" />
+      <option name="MAIN_CLASS_NAME" value="de.ait.services.UsersServiceImplTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -230,7 +229,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
