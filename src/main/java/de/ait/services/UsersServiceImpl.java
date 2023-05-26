@@ -43,8 +43,6 @@ public class UsersServiceImpl implements UsersService {
     }
 
 
-
-
     @Override
     public void addNewUser(String firstName, String lastName, String age, String height) {
         User newUser = new User(firstName, lastName, Integer.parseInt(age), Double.parseDouble(height));
@@ -62,5 +60,19 @@ public class UsersServiceImpl implements UsersService {
 
         }
         return sum / users.size();
+    }
+
+    public void getNameOfShortest() {
+        double minHeight = usersRepository.findAll().get(0).getHeight();
+        String firstName = "";
+        String lastName = "";
+        for (User user : usersRepository.findAll()) {
+            if (minHeight > user.getHeight()) {
+                firstName = user.getFirstName();
+                lastName = user.getLastName();
+                minHeight=user.getHeight();
+            }
+        }
+        System.out.println( firstName + " " + lastName);
     }
 }

@@ -74,8 +74,10 @@ public class Main {
 
 
                     break;
-
-
+                case 6:
+                    System.out.println("Вывести имя и фамилию самого низкого человека");
+                    usersService.getNameOfShortest();
+                    break;
                 case 0:
                     System.out.println("Выход");
                     System.exit(0);

@@ -8,4 +8,5 @@ public interface UsersService {
     String getLastNameOfMostAging();
     void addNewUser(String firstName, String lastName, String age, String height);
     int getAverageAgeOfUsers();
+    void getNameOfShortest();
 }
