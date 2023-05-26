@@ -52,4 +52,15 @@ public class UsersServiceImpl implements UsersService {
 
 
     }
+
+    @Override
+    public int getAverageAgeOfUsers() {
+        List<User> users = usersRepository.findAll();
+        int sum = 0;
+        for (User user : users) {
+            sum += user.getAge();
+
+        }
+        return sum / users.size();
+    }
 }
