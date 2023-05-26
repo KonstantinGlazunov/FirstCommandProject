@@ -1,6 +1,5 @@
 package de.ait.services;
 
-import de.ait.app.Main;
 import de.ait.models.User;
 import de.ait.repositories.UsersRepository;
 
@@ -70,10 +69,10 @@ public class UsersServiceImpl implements UsersService {
             if (minHeight > user.getHeight()) {
                 firstName = user.getFirstName();
                 lastName = user.getLastName();
-                minHeight=user.getHeight();
+                minHeight = user.getHeight();
             }
         }
-        System.out.println( firstName + " " + lastName);
+        System.out.println(firstName + " " + lastName);
     }
 
     public boolean getAgeOfHeighest() {
@@ -82,10 +81,15 @@ public class UsersServiceImpl implements UsersService {
         for (User user : usersRepository.findAll()) {
             if (maxHeight > user.getHeight()) {
                 age = user.getAge();
-                maxHeight=user.getHeight();
+                maxHeight = user.getHeight();
             }
+            System.out.println(age);
         }
-        System.out.println (getAgeOfHeighest());
+        return false;
 
     }
+
 }
+
+
+
