@@ -24,5 +24,4 @@ this.usersService = new UsersServiceImpl(new UsersRepositoryListImpl());
         assertEquals(expected, actual);
     }
 
-
 }
