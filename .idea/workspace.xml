@@ -8,10 +8,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b1358f-a9e2-4fb7-8cfa-cc87b9d6953a" name="Changes" comment="add getFullNameOfYoungest">
+    <list default="true" id="01b1358f-a9e2-4fb7-8cfa-cc87b9d6953a" name="Changes" comment="add getNameOfHighest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,6 +220,14 @@
       <option name="presentableId" value="Default" />
       <updated>1685019148536</updated>
     </task>
+    <task id="LOCAL-00001" summary="add getNameOfHighest">
+      <created>1685121539385</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685121539385</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -249,6 +255,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add getFullNameOfYoungest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add getFullNameOfYoungest" />
+    <MESSAGE value="add getNameOfHighest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getNameOfHighest" />
   </component>
 </project>

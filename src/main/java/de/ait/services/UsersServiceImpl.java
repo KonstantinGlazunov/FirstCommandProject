@@ -75,4 +75,16 @@ public class UsersServiceImpl implements UsersService {
         }
         System.out.println( firstName + " " + lastName);
     }
+
+    public void getNameOfHighest() {
+        double maxHeight = usersRepository.findAll().get(0).getHeight();
+        int age = 0;
+        for (User user : usersRepository.findAll()) {
+            if (maxHeight > user.getHeight()) {
+                age = user.getAge();
+                maxHeight=user.getHeight();
+            }
+        }
+        System.out.println(age);
+    }
 }
