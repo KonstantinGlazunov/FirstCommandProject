@@ -27,6 +27,8 @@ public class Main {
 
             System.out.println("0. Выход");
 
+
+
             int command = scanner.nextInt();
             scanner.nextLine();
 
@@ -47,6 +49,27 @@ public class Main {
                     System.out.println(lastName);
 
                     break;
+
+                case 3:
+                    System.out.println("Сохраняем нового пользователя: ");
+                    System.out.println("Введите имя: ");
+                    String firstName = scanner.nextLine();
+
+                    System.out.println("Введите Фамилию: ");
+                    lastName = scanner.nextLine();
+
+                    System.out.println("Введите возраст: ");
+                    String age = scanner.nextLine();
+
+                    System.out.println("Введите рост: ");
+                    String height = scanner.nextLine();
+
+                    usersService.addNewUser(firstName, lastName, age, height);
+
+
+                    break;
+
+
                 case 0:
                     System.out.println("Выход");
                     System.exit(0);

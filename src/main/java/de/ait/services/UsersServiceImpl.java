@@ -1,5 +1,6 @@
 package de.ait.services;
 
+import de.ait.app.Main;
 import de.ait.models.User;
 import de.ait.repositories.UsersRepository;
 
@@ -39,5 +40,16 @@ public class UsersServiceImpl implements UsersService {
         int maxAge = Collections.max(userAge.keySet());
 
         return userAge.get(maxAge);
+    }
+
+
+
+
+    @Override
+    public void addNewUser(String firstName, String lastName, String age, String height) {
+        User newUser = new User(firstName, lastName, Integer.parseInt(age), Double.parseDouble(height));
+        usersRepository.saveNewUser(newUser);
+
+
     }
 }

@@ -29,4 +29,14 @@ public class User {
     public double getHeight() {
         return height;
     }
+
+
+    @Override
+    public String toString() {
+        /*Kirill|Petrov|55|1.90*/
+        return firstName + "|" +
+                lastName + "|" +
+                age + "|" +
+                height;
+    }
 }
