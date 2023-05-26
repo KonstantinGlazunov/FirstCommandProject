@@ -10,6 +10,7 @@
   <component name="ChangeListManager">
     <list default="true" id="01b1358f-a9e2-4fb7-8cfa-cc87b9d6953a" name="Changes" comment="add getNameOfHighest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/de/ait/services/UsersServiceImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +37,9 @@
         <option name="useMavenConfig" value="true" />
       </MavenGeneralSettings>
     </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2QHn05EqoUSvo6glZfakI4rzxx5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -227,7 +231,21 @@
       <option name="project" value="LOCAL" />
       <updated>1685121539385</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add getNameOfHighest">
+      <created>1685122913806</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685122913806</updated>
+    </task>
+    <task id="LOCAL-00003" summary="add getNameOfHighest">
+      <created>1685122949427</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1685122949427</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
