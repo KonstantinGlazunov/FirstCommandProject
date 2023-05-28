@@ -87,7 +87,7 @@ public class Main {
 
                 case 5:
                     System.out.println("Вывести возраст самого высокого человека");
-                    usersService.getNameOfHighest();
+                    usersService.getAgeOfHighest();
                     break;
             }
 

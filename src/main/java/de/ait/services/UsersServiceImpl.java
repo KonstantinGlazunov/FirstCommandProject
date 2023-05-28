@@ -76,7 +76,7 @@ public class UsersServiceImpl implements UsersService {
     }
 
     @Override
-    public void getNameOfHighest() {
+    public void getAgeOfHighest() {
 
     }
 
