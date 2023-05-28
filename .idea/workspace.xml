@@ -8,7 +8,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="01b1358f-a9e2-4fb7-8cfa-cc87b9d6953a" name="Changes" comment="add getNameOfHighest" />
+    <list default="true" id="01b1358f-a9e2-4fb7-8cfa-cc87b9d6953a" name="Changes" comment="add getAgeOfHighest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -257,7 +257,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685136991485</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="add getAgeOfHighest">
+      <created>1685301859075</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1685301859075</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -286,6 +293,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add getFullNameOfYoungest" />
     <MESSAGE value="add getNameOfHighest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add getNameOfHighest" />
+    <MESSAGE value="add getAgeOfHighest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add getAgeOfHighest" />
   </component>
 </project>
