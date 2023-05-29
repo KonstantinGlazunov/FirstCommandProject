@@ -3,6 +3,7 @@ package de.ait.services;
 import de.ait.models.User;
 import de.ait.repositories.UsersRepository;
 
+import java.io.IOException;
 import java.util.*;
 
 public class UsersServiceImpl implements UsersService {
@@ -28,7 +29,6 @@ public class UsersServiceImpl implements UsersService {
     @Override
     public String getLastNameOfMostAging() {
 
-
         List<User> users = usersRepository.findAll();
         Map<Integer, String> userAge = new HashMap<>();
 
@@ -43,55 +43,82 @@ public class UsersServiceImpl implements UsersService {
 
 
     @Override
-    public void addNewUser(String firstName, String lastName, String age, String height) {
-        User newUser = new User(firstName, lastName, Integer.parseInt(age), Double.parseDouble(height));
-        usersRepository.saveNewUser(newUser);
+    public void addNewUser() {
 
+        User newUser;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите имя: ");
+        String firstName = scanner.nextLine();
+
+        System.out.println("Введите Фамилию: ");
+        String lastName = scanner.nextLine();
+
+        System.out.println("Введите возраст: ");
+        String age = scanner.nextLine();
+        int newAge;
+        try {
+            newAge = Integer.parseInt(age);
+        } catch (RuntimeException e) {
+            throw new RuntimeException("Не верный формат данных ");
+        }
+        System.out.println("Введите рост: ");
+        String height = scanner.nextLine();
+
+        Double newHeight;
+        try {
+            newHeight = Double.parseDouble(height);
+
+        } catch (RuntimeException e) {
+            throw new RuntimeException("Не верный формат данных ");
+        }
+
+        newUser = new User(firstName, lastName, newAge, newHeight);
+        usersRepository.saveNewUser(newUser);
 
     }
 
+
     @Override
-    public int getAverageAgeOfUsers() {
+    public double getAverageAgeOfUsers() {
+
         List<User> users = usersRepository.findAll();
         int sum = 0;
         for (User user : users) {
             sum += user.getAge();
-
         }
-        return sum / users.size();
+        double average = (double) sum / users.size();
+        return average;
     }
 
-    public void getNameOfShortest() {
-        double minHeight = usersRepository.findAll().get(0).getHeight();
-        String firstName = "";
-        String lastName = "";
-        for (User user : usersRepository.findAll()) {
-            if (minHeight > user.getHeight()) {
-                firstName = user.getFirstName();
-                lastName = user.getLastName();
-                minHeight = user.getHeight();
-            }
-        }
-        System.out.println(firstName + " " + lastName);
-    }
 
     @Override
-    public void getAgeOfHighest() {
+    public int getAgeOfHighest() {
 
-    }
-
-    public int getAgeOfHeighest() {
         double maxHeight = usersRepository.findAll().get(0).getHeight();
         int age = 0;
         for (User user : usersRepository.findAll()) {
-            if (maxHeight > user.getHeight()) {
+            if (maxHeight < user.getHeight()) {
                 age = user.getAge();
                 maxHeight = user.getHeight();
             }
-            System.out.println(age);
+
         }
+        System.out.println(age);
         return age;
     }
+
+
+    @Override
+    public String getNameOfShortest() {
+        List<User> users = usersRepository.findAll();
+        Map<Double, String> fullName = new HashMap<>();
+        for (User user : users) {
+            fullName.put(user.getHeight(), user.getFirstName() + " " + user.getLastName());
+        }
+        double minHeight = Collections.min(fullName.keySet());
+        return fullName.get(minHeight);
+    }
+
 
 }
 

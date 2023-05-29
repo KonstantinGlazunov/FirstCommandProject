@@ -19,9 +19,10 @@ public class UsersRepositoryListImpl implements UsersRepository {
     }
 
     @Override
-    public void saveNewUser(User newUser) {
+    public boolean saveNewUser(User newUser) {
 
         users.add(newUser);
+        return true;
 
     }
 

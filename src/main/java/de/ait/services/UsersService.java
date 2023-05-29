@@ -1,13 +1,20 @@
 package de.ait.services;
 
+import de.ait.models.User;
+
 import java.util.List;
 
 public interface UsersService {
     List<String> getNames();
 
     String getLastNameOfMostAging();
-    void addNewUser(String firstName, String lastName, String age, String height);
-    int getAverageAgeOfUsers();
-    void getNameOfShortest();
-    void getAgeOfHighest();
+
+    public void addNewUser();
+
+    double getAverageAgeOfUsers();
+
+    int getAgeOfHighest();
+
+    String getNameOfShortest();
+
 }

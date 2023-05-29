@@ -19,7 +19,7 @@ public class UsersRepositoryTextFileImpl implements UsersRepository {
         List<User> users = new ArrayList<>();
 
 
-        try (FileReader fileReader = new FileReader(fileName); 
+        try (FileReader fileReader = new FileReader(fileName);
              BufferedReader bufferedReader = new BufferedReader(fileReader)) {
 
             String line = bufferedReader.readLine();
@@ -37,25 +37,26 @@ public class UsersRepositoryTextFileImpl implements UsersRepository {
     }
 
     @Override
-    public void saveNewUser(User newUser)  {
-        try (FileWriter fileWriter = new FileWriter(fileName,true); // добавить только новую строку
-             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)){
+    public boolean saveNewUser(User newUser) {
+        try (FileWriter fileWriter = new FileWriter(fileName, true); // добавить только новую строку в файл
+             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
-            String line = newUser.toString(); // Kirill|Petrov|55|1.90
+            String line = newUser.toString();
+bufferedWriter.newLine();
+            bufferedWriter.write(line );
 
-            bufferedWriter.write(line + "\n");
+            return true;
 
-
+        } catch (IOException e) {
+            System.err.println("Произошла ошибка записи в файл");
         }
-        catch (IOException e) {
-            System.err.println("Произошла ошибка");
-        }
+        return false;
+
+
     }
 
 
-
-
-    private static User parseLine(String line) {
+    private static User parseLine(String line) {             // Как это работает!?
         String[] parsed = line.split("\\|");
         String firstName = parsed[0];
         String lastName = parsed[1];
