@@ -55,25 +55,33 @@ public class UsersServiceImpl implements UsersService {
 
         System.out.println("Введите возраст: ");
         String age = scanner.nextLine();
-        int newAge;
+        boolean isCorrectInput = true;
+        int newAge=0;
         try {
             newAge = Integer.parseInt(age);
         } catch (RuntimeException e) {
-            throw new RuntimeException("Не верный формат данных ");
+            // throw new RuntimeException("Не верный формат данных ");
+            isCorrectInput = false;
         }
         System.out.println("Введите рост: ");
         String height = scanner.nextLine();
 
-        Double newHeight;
+        double newHeight=0;
         try {
             newHeight = Double.parseDouble(height);
 
         } catch (RuntimeException e) {
-            throw new RuntimeException("Не верный формат данных ");
+           // throw new RuntimeException("Не верный формат данных ");
+            isCorrectInput = false;
         }
 
-        newUser = new User(firstName, lastName, newAge, newHeight);
-        usersRepository.saveNewUser(newUser);
+       if (isCorrectInput){
+           newUser = new User(firstName, lastName, newAge, newHeight);
+           usersRepository.saveNewUser(newUser);
+       }
+       else {
+           System.out.println("Не верный формат данных ");
+       }
 
     }
 
@@ -101,7 +109,6 @@ public class UsersServiceImpl implements UsersService {
                 age = user.getAge();
                 maxHeight = user.getHeight();
             }
-
         }
         System.out.println(age);
         return age;

@@ -38,12 +38,12 @@ public class UsersRepositoryTextFileImpl implements UsersRepository {
 
     @Override
     public boolean saveNewUser(User newUser) {
-        try (FileWriter fileWriter = new FileWriter(fileName, true); // добавить только новую строку в файл
+        try (FileWriter fileWriter = new FileWriter(fileName, true); // try with recyrses  файл будет точно закрыт
              BufferedWriter bufferedWriter = new BufferedWriter(fileWriter)) {
 
             String line = newUser.toString();
-bufferedWriter.newLine();
-            bufferedWriter.write(line );
+            bufferedWriter.newLine();
+            bufferedWriter.write(line);
 
             return true;
 

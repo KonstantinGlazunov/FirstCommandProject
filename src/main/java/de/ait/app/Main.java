@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         UsersRepository usersRepository = new UsersRepositoryTextFileImpl("users.txt");
-        UsersRepository testUserRepository = new UsersRepositoryListImpl();
+        // UsersRepository testUserRepository = new UsersRepositoryListImpl();
         UsersService usersService = new UsersServiceImpl(usersRepository);
 
         while (true) {
@@ -48,12 +48,9 @@ public class Main {
 
 
                 case 3:
-                    try {
-                        System.out.println("Сохраняем нового пользователя: ");
-                        usersService.addNewUser();
-                    } catch (RuntimeException e) {
-                        System.out.println(e.getMessage());
-                    }
+                    System.out.println("Сохраняем нового пользователя: ");
+                    usersService.addNewUser();
+
                     break;
 
                 case 4:
